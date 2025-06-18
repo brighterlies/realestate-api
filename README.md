@@ -20,5 +20,5 @@ Agregaría pasos de construcción y empaquetado para generar artefactos listos p
 ----------------
 
 ## Demo
-- En la carpeta `img_workflow` se muestra ambos caso, tanto `sucess` y `failure`. 
+- En la carpeta `img_workflow` se muestra ambos caso, tanto `success` y `failure`. 
 - Para provocar el fallo, primero se modifica la ruta en `app.js` cambiando `/api/inmuebles` a `/api/propiedades`. Luego, se suben los cambios al repositorio y se verifica que los tests fallan en `GitHub Actions`. Finalmente, se restaura la configuración original para corregir el error.
