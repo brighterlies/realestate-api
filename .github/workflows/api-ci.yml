@@ -27,9 +27,11 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-node
       - name: Instalar dependencias
-        run: npm ci
+        run: npm ci --no-audit --no-fund
+      - name: Dar permisos de ejecución a Jest
+        run: chmod +x node_modules/.bin/jest
       - name: Ejecutar pruebas con Jest
-        run: npm test
+        run: npx jest --runInBand
       - name: Reportar éxito
         if: success()
         run: echo "✅ API funcional en Node ${{ matrix.node }}"
