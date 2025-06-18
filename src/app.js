@@ -6,7 +6,11 @@ const inmuebles = [
   { id: 3, direccion: 'Carrera 789', precio: 120000, tipo: 'Estudio' }
 ];
 
-app.get('/api/inmuebles', (req, res) => {
+/*app.get('/api/inmuebles', (req, res) => {
+  res.json(inmuebles);
+});*/
+
+app.get('/api/propiedades', (req, res) => {  // Se cambia la ruta
   res.json(inmuebles);
 });
 
